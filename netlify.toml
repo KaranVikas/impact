@@ -1,0 +1,9 @@
+# Static site — no build step. Netlify serves files from the repo root.
+[build]
+  publish = "."
+
+# Friendly fallback so any unknown path lands on the page.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
