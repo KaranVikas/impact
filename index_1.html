@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Karan Vikas — Community Service & Impact</title>
+<meta name="description" content="Four years of grassroots community service across Chandigarh, India — education, food, healthcare, and child-safety programs with the Robin Hood Army and Bachpan. Featured on DD National and ABP News." />
+
+<!-- ============================================================
+     HOW TO ADD YOUR PHOTOS
+     This page looks finished even with no images (styled placeholders
+     show the initiative title). To drop in your real photos:
+       1. Make a folder named  images/  next to this index.html
+       2. Save each photo with the EXACT filename listed in the
+          data-img attribute on each card (also in HOW_TO_ADD_PHOTOS.md)
+       3. Re-open the page — the photos replace the placeholders.
+     Tip: crop out the grey "Media" header/sidebar from each screenshot
+     first, so only the photo shows.
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --forest:#16513B;        /* living pine — primary */
+    --forest-deep:#0E3B2A;
+    --forest-soft:#1F7A6E;   /* water-teal — environmental secondary */
+    --teal:#1E7E74;
+    --leaf:#9CC24A;          /* fresh leaf-green — renewal accent */
+    --marigold:#E2A33C;      /* warm honey — human/hope accent */
+    --marigold-deep:#C2842A;
+    --paper:#F6F3EA;
+    --paper-warm:#ECE7D7;
+    --ink:#1E2622;
+    --muted:#586259;
+    --line:#E0D8C7;
+    --shadow:0 18px 40px -22px rgba(14,59,42,.55);
+    --ring:linear-gradient(90deg,var(--teal),var(--leaf) 55%,var(--marigold));
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+  .eyebrow{
+    font-family:"Inter",sans-serif;
+    font-size:.72rem;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;
+    color:var(--marigold-deep);
+    display:inline-flex;align-items:center;gap:.55em;
+  }
+  .eyebrow svg{width:14px;height:14px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(110% 80% at 88% -10%, rgba(226,163,60,.15), transparent 52%),
+      radial-gradient(90% 80% at 5% 110%, rgba(156,194,74,.16), transparent 55%),
+      linear-gradient(160deg,var(--forest) 0%,#0F4A44 100%);
+    color:#F4EFE3;
+    padding:clamp(70px,11vw,130px) 0 clamp(60px,9vw,104px);
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:22px 22px;mask-image:linear-gradient(180deg,transparent,#000 40%,transparent);
+    opacity:.5;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .hero .eyebrow{color:var(--marigold)}
+  .hero h1{
+    font-size:clamp(2.5rem,6.2vw,4.6rem);
+    font-weight:600;line-height:1.04;letter-spacing:-.015em;
+    margin:.5em 0 .42em;max-width:16ch;
+  }
+  .hero h1 em{font-style:italic;color:var(--leaf)}
+  .ringbar{height:4px;width:128px;border-radius:999px;background:var(--ring);margin:6px 0 26px}
+  .hero .lede{
+    font-size:clamp(1.02rem,1.6vw,1.22rem);
+    color:#D9E2D5;max-width:54ch;font-weight:400;
+  }
+  .hero .name{
+    margin-top:30px;font-size:.95rem;color:#BFD0BC;
+  }
+  .hero .name strong{color:#F4EFE3;font-weight:600}
+
+  /* tally */
+  .tally{
+    position:relative;
+    display:flex;flex-wrap:wrap;gap:0;margin-top:46px;
+    border:1px solid rgba(244,239,227,.18);border-radius:14px;
+    overflow:hidden;backdrop-filter:blur(2px);
+    background:rgba(255,255,255,.03);
+  }
+  .tally::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ring)}
+  .tally div{
+    flex:1 1 0;min-width:148px;padding:22px 24px;
+    border-right:1px solid rgba(244,239,227,.14);
+  }
+  .tally div:last-child{border-right:none}
+  .tally .num{
+    font-family:"Fraunces",serif;font-size:1.9rem;font-weight:600;
+    color:var(--marigold);line-height:1;
+  }
+  .tally .cap{
+    font-size:.78rem;color:#C7D4C3;margin-top:8px;
+    letter-spacing:.02em;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:clamp(58px,8vw,96px) 0}
+  .sec-head{max-width:60ch;margin-bottom:46px}
+  .sec-head h2{
+    font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:600;
+    letter-spacing:-.01em;color:var(--forest);margin:.4em 0 .5em;
+    line-height:1.1;
+  }
+  .sec-head h2::after{content:"";display:block;height:3px;width:88px;border-radius:999px;background:var(--ring);margin-top:14px}
+  .sec-head p{color:var(--muted);font-size:1.02rem;max-width:52ch}
+
+  /* ---------- WORK GRID ---------- */
+  .grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;
+    overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 1px 0 rgba(31,36,33,.03);
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .card.span2{grid-column:span 2}
+
+  .fig{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    background:linear-gradient(150deg,var(--forest-soft),var(--forest-deep));
+  }
+  .card.span2 .fig{aspect-ratio:16/9}
+  /* styled placeholder shown until a real photo loads on top */
+  .fig .ph{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:12px;
+    text-align:center;padding:26px;color:#EAF1E6;
+  }
+  .fig .ph svg{width:30px;height:30px;opacity:.85}
+  .fig .ph span{
+    font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
+    color:#BFD3BB;font-weight:600;
+  }
+  .fig .ph small{font-family:"Fraunces",serif;font-size:1.05rem;color:#F2F6EF;line-height:1.2;max-width:22ch}
+  .fig img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:2;
+  }
+  .badge-news{
+    position:absolute;top:12px;left:12px;z-index:3;
+    background:rgba(14,59,42,.88);color:#F4EFE3;
+    font-size:.68rem;font-weight:600;letter-spacing:.06em;
+    padding:6px 11px;border-radius:999px;text-transform:uppercase;
+    backdrop-filter:blur(4px);border:1px solid rgba(226,163,60,.45);
+  }
+  .card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .card-body h3{
+    font-size:1.16rem;font-weight:600;color:var(--forest);
+    line-height:1.22;letter-spacing:-.005em;
+  }
+  .card-body p{font-size:.93rem;color:var(--muted);line-height:1.55}
+  .tag{
+    margin-top:auto;font-size:.72rem;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--marigold-deep);
+  }
+
+  /* ---------- RECOGNITION ---------- */
+  .recog{background:var(--paper-warm)}
+  .recog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .chip{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:24px 22px;display:flex;flex-direction:column;gap:8px;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .chip:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .chip .k{
+    font-family:"Fraunces",serif;font-size:1.45rem;font-weight:600;color:var(--forest);
+  }
+  .chip .v{font-size:.86rem;color:var(--muted)}
+  .credimg{
+    grid-column:span 2;background:#fff;border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;position:relative;min-height:230px;
+  }
+  .credimg .fig{aspect-ratio:auto;height:100%;min-height:230px}
+  .credimg .fig img{object-fit:contain;background:#fff;padding:14px}
+
+  /* ---------- VIDEOS ---------- */
+  .videos{background:var(--forest);color:#F4EFE3}
+  .videos .sec-head h2{color:#fff}
+  .videos .sec-head p{color:#C7D4C3}
+  .videos .eyebrow{color:var(--marigold)}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .vcard{
+    background:rgba(255,255,255,.05);border:1px solid rgba(244,239,227,.16);
+    border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
+    transition:transform .3s,border-color .3s;display:block;
+  }
+  .vcard:hover{transform:translateY(-4px);border-color:rgba(226,163,60,.6)}
+  .vthumb{
+    aspect-ratio:16/9;position:relative;
+    background:linear-gradient(150deg,var(--forest-soft),var(--forest-deep));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .vthumb .play{
+    width:58px;height:58px;border-radius:50%;
+    background:var(--marigold);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 22px -8px rgba(0,0,0,.6);transition:transform .3s;
+  }
+  .vcard:hover .play{transform:scale(1.08)}
+  .vthumb .play svg{width:22px;height:22px;margin-left:3px}
+  .vbody{padding:18px 20px}
+  .vbody h3{font-size:1.04rem;color:#fff;font-weight:600;margin-bottom:5px}
+  .vbody p{font-size:.85rem;color:#C7D4C3}
+  .vbody .lk{font-size:.74rem;color:var(--marigold);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:10px;display:inline-block}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep);color:#CFDBC9;padding:64px 0 50px}
+  footer .ft{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:flex-end}
+  footer h2{font-size:clamp(1.5rem,3vw,2.1rem);color:#F4EFE3;font-weight:600;max-width:18ch;line-height:1.12}
+  footer .links{display:flex;flex-direction:column;gap:11px;font-size:.95rem}
+  footer .links a{
+    text-decoration:none;color:#E7EFE2;display:inline-flex;align-items:center;gap:9px;
+    border-bottom:1px solid transparent;transition:border-color .25s,color .25s;width:fit-content;
+  }
+  footer .links a:hover{color:var(--marigold);border-color:var(--marigold)}
+  footer .fine{margin-top:42px;padding-top:24px;border-top:1px solid rgba(244,239,227,.12);font-size:.8rem;color:#9FB29A}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .card.span2{grid-column:span 2}
+    .recog-grid{grid-template-columns:repeat(2,1fr)}
+    .credimg{grid-column:span 2}
+    .vgrid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:620px){
+    .grid{grid-template-columns:1fr}
+    .card.span2{grid-column:span 1}
+    .recog-grid{grid-template-columns:1fr}
+    .credimg{grid-column:span 1}
+    .vgrid{grid-template-columns:1fr}
+    .tally div{flex:1 1 50%;min-width:50%}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    *{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l2.4 6.9 7.1.2-5.7 4.3 2.1 6.9-5.9-4-5.9 4 2.1-6.9-5.7-4.3 7.1-.2z"/></svg>
+      Community Service · Chandigarh, India · 2019–2024
+    </span>
+    <h1>Showing up where the help is needed <em>most</em>.</h1>
+    <div class="ringbar" aria-hidden="true"></div>
+    <p class="lede">Four years of grassroots community work — feeding families, getting slum children into school, supporting patients through COVID-19, and protecting kids from harm — built one drive, one home, one classroom at a time.</p>
+    <p class="name"><strong>Karan Vikas</strong> — Lead Coordinator &amp; Volunteer, Robin Hood Army &amp; Bachpan Save The Innocence</p>
+
+    <div class="tally">
+      <div><div class="num">4+</div><div class="cap">Years of service</div></div>
+      <div><div class="num">15+</div><div class="cap">Community programs led</div></div>
+      <div><div class="num">75+</div><div class="cap">People uplifted in a single drive</div></div>
+      <div><div class="num">2</div><div class="cap">National news features</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= FEATURED WORK ======================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l2.4 6.9 7.1.2-5.7 4.3 2.1 6.9-5.9-4-5.9 4 2.1-6.9-5.7-4.3 7.1-.2z"/></svg> On the ground</span>
+      <h2>The work, initiative by initiative</h2>
+      <p>Every program below is real, hands-on community work — coordinated end-to-end, from logistics to families to follow-through.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- 1 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/school-admissions.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M21 9v6"/><path d="M7 11.5V16c0 1 2.2 2 5 2s5-1 5-2v-4.5"/></svg>
+            <small>Promoting school admissions for slum children</small>
+          </div>
+          <img alt="Karan helping a family enroll their child in school" />
+        </div>
+        <div class="card-body">
+          <h3>Advocating for a better tomorrow</h3>
+          <p>Worked with authorities and parents to enrol slum children in school — gathering each child's background, assembling the documentation families needed, and convincing parents of the long-term value of education.</p>
+          <span class="tag">Education access</span>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/mnc-visit.jpg">
+          <span class="badge-news">Featured · ABP News</span>
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>
+            <small>MNC exposure visits for underprivileged children</small>
+          </div>
+          <img alt="Children visiting a corporate office on an exposure visit" />
+        </div>
+        <div class="card-body">
+          <h3>Career Catalysts: MNC exposure visits</h3>
+          <p>Organised office visits to companies and the Indian School of Business so underprivileged children could meet employee role models, see real workplaces, and dream bigger about their futures.</p>
+          <span class="tag">Aspiration &amp; mentorship</span>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/independence-day.jpg">
+          <span class="badge-news">Featured · ABP News</span>
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            <small>75 people uplifted for India's 75th Independence Day</small>
+          </div>
+          <img alt="Disability outreach and wheelchair distribution drive" />
+        </div>
+        <div class="card-body">
+          <h3>75 lives for the 75th Independence Day</h3>
+          <p>Identified families in need across Chandigarh slums and helped them access government schemes — creating UDID cards, arranging GRIID counseling, and gifting wheelchairs that gave children mobility for the first time.</p>
+          <span class="tag">Disability &amp; inclusion</span>
+        </div>
+      </article>
+
+      <!-- 4 (wide) — DD National COVID -->
+      <article class="card span2 reveal">
+        <div class="fig" data-img="images/dd-national-covid.jpg">
+          <span class="badge-news">Featured · DD National</span>
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            <small>COVID-19 relief, recognised on national television</small>
+          </div>
+          <img alt="DD National news still of the COVID-19 relief work" />
+        </div>
+        <div class="card-body">
+          <h3>COVID-19 relief — featured on DD National</h3>
+          <p>Provided free meals twice daily, registered senior citizens for vaccination, arranged hospital pick-and-drop, and ran awareness on COVID safety — keeping vulnerable communities fed, informed, and protected through a critical period. The effort was recognised on DD National News.</p>
+          <span class="tag">Crisis response</span>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/bachpan.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/></svg>
+            <small>Bachpan: protecting children from harm</small>
+          </div>
+          <img alt="Bachpan Save The Innocence child-safety session with children" />
+        </div>
+        <div class="card-body">
+          <h3>Bachpan — Save The Innocence</h3>
+          <p>As Program Coordinator, delivered child-safety workshops teaching personal safety and good-touch / bad-touch awareness — leading on-ground execution, session logistics, and partnership coordination between organisations.</p>
+          <span class="tag">Child safety</span>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/origami.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 9-9 9-9-9 9-9z"/><path d="M12 3v18M3 12h18"/></svg>
+            <small>Creative learning &amp; origami workshops</small>
+          </div>
+          <img alt="Children in a hands-on origami learning workshop" />
+        </div>
+        <div class="card-body">
+          <h3>Creative education &amp; engagement</h3>
+          <p>Ran hands-on origami workshops designed to build creativity, focus, and interactive learning — turning a classroom into a space where children stayed curious and engaged.</p>
+          <span class="tag">Creative learning</span>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/inspiring-young-minds.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+            <small>Inspiring Young Minds — ISB &amp; Knack Global visits</small>
+          </div>
+          <img alt="Children on an institutional visit, inspiring young minds" />
+        </div>
+        <div class="card-body">
+          <h3>Inspiring young minds</h3>
+          <p>Arranged visits for children to institutions like the Indian School of Business and companies like Knack Global — opening doors to environments most of them had never seen, and showing them what's possible.</p>
+          <span class="tag">Opportunity</span>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="card reveal">
+        <div class="fig" data-img="images/food-drives.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11h14l-1 9H6l-1-9z"/><path d="M9 11V7a3 3 0 016 0v4"/></svg>
+            <small>Weekend study support &amp; food drives</small>
+          </div>
+          <img alt="Food distribution drive outside a city hospital" />
+        </div>
+        <div class="card-body">
+          <h3>Every-weekend study &amp; food drives</h3>
+          <p>Supported underprivileged children with their studies every weekend, and organised food drives outside city hospitals — offering warm meals to those in need while addressing immediate hunger.</p>
+          <span class="tag">Hunger &amp; education</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RECOGNITION ======================= -->
+<section class="recog" id="recognition">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l2.4 6.9 7.1.2-5.7 4.3 2.1 6.9-5.9-4-5.9 4 2.1-6.9-5.7-4.3 7.1-.2z"/></svg> Recognition &amp; proof</span>
+      <h2>Trusted, verified, and on the record</h2>
+      <p>The work has been recognised by national media, partner NGOs, and corporate partners.</p>
+    </div>
+
+    <div class="recog-grid">
+      <div class="chip reveal"><div class="k">DD National</div><div class="v">National TV feature for COVID-19 social service</div></div>
+      <div class="chip reveal"><div class="k">ABP News ×2</div><div class="v">Independence Day uplift drive &amp; MNC exposure visits</div></div>
+
+      <!-- Robin Hood Army badge image -->
+      <div class="credimg reveal">
+        <div class="fig" data-img="images/rha-badge.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l2.4 6.9 7.1.2-5.7 4.3 2.1 6.9-5.9-4-5.9 4 2.1-6.9-5.7-4.3 7.1-.2z"/></svg>
+            <span>Robin Hood Army</span>
+            <small>"Ninja" — 10 drives completed</small>
+          </div>
+          <img alt="Robin Hood Army Ninja badge awarded for 10 completed drives" />
+        </div>
+      </div>
+
+      <div class="chip reveal"><div class="k">Robin Hood Army</div><div class="v">Earned "Ninja" status for 10 completed service drives</div></div>
+      <div class="chip reveal"><div class="k">GRIID &amp; ISB</div><div class="v">Partnered on disability resources &amp; student exposure</div></div>
+
+      <!-- Knack Global certificate image -->
+      <div class="credimg reveal">
+        <div class="fig" data-img="images/knack-certificate.jpg">
+          <div class="ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Certificate of Appreciation</span>
+            <small>Knack Global — for selfless service</small>
+          </div>
+          <img alt="Knack Global certificate of appreciation awarded to Karan Vikas" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VIDEOS ======================= -->
+<section class="videos" id="watch">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5l2.4 6.9 7.1.2-5.7 4.3 2.1 6.9-5.9-4-5.9 4 2.1-6.9-5.7-4.3 7.1-.2z"/></svg> See it for yourself</span>
+      <h2>Watch the work</h2>
+      <p>Short clips from the field. <strong>Paste your real video links</strong> into the <code>href</code> of each card below (they're marked <code>#add-link</code> for now).</p>
+    </div>
+
+    <div class="vgrid">
+      <a class="vcard reveal" href="#add-link" target="_blank" rel="noopener">
+        <div class="vthumb"><span class="play"><svg viewBox="0 0 24 24" fill="#16513B"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="vbody">
+          <h3>DD National feature</h3>
+          <p>National television coverage of the COVID-19 relief drive.</p>
+          <span class="lk">Add link →</span>
+        </div>
+      </a>
+
+      <a class="vcard reveal" href="#add-link" target="_blank" rel="noopener">
+        <div class="vthumb"><span class="play"><svg viewBox="0 0 24 24" fill="#16513B"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="vbody">
+          <h3>Bachpan child-safety session</h3>
+          <p>Teaching children personal safety and good-touch / bad-touch awareness.</p>
+          <span class="lk">Add link →</span>
+        </div>
+      </a>
+
+      <a class="vcard reveal" href="https://www.facebook.com/100005621437134/videos/789694558731859/" target="_blank" rel="noopener">
+        <div class="vthumb"><span class="play"><svg viewBox="0 0 24 24" fill="#16513B"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="vbody">
+          <h3>Creative learning workshop</h3>
+          <p>Hands-on origami session built around focus and creativity.</p>
+          <span class="lk">Add link →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <h2>Service is the throughline of everything I do.</h2>
+      <div class="links">
+        <a href="mailto:karanvikas15@gmail.com">✉&nbsp;&nbsp;karanvikas15@gmail.com</a>
+        <a href="https://linkedin.com/in/karanvikas" target="_blank" rel="noopener">in&nbsp;&nbsp;linkedin.com/in/karanvikas</a>
+        <a href="https://karanvikasportfolio.netlify.app/" target="_blank" rel="noopener">↗&nbsp;&nbsp;Main portfolio</a>
+      </div>
+    </div>
+    <div class="fine">Karan Vikas · Hamilton, ON · Community service &amp; program coordination, 2019–2024</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal real photos over placeholders; hide <img> if the file isn't there yet.
+  document.querySelectorAll('.fig[data-img]').forEach(function(fig){
+    var img = fig.querySelector('img');
+    if(!img) return;
+    img.addEventListener('error', function(){ img.style.display='none'; });
+    img.src = fig.getAttribute('data-img');
+  });
+
+  // Scroll reveal
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
